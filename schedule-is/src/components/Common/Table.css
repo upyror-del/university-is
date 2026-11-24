@@ -1,0 +1,97 @@
+/* Спільні стилі таблиць даних (групи, викладачі, аудиторії) */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--border-radius);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.table-header-row { background-color: var(--background-color); }
+
+.table-th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table-row {
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.table-row:hover { background-color: #f8fafc; }
+
+.table-td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.cell-main { font-weight: 500; }
+
+.cell-secondary {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.cell-chip {
+  background-color: #eff6ff;
+  color: var(--primary-color);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.cell-person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cell-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.table-empty {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.table-empty-icon { font-size: 48px; margin-bottom: 12px; }
+
+.table-empty-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.table-empty-hint {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.table-footer {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  background-color: var(--background-color);
+}

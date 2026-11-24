@@ -1,0 +1,29 @@
+/* Спільні стилі форм сутностей */
+.entity-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.entity-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Блок помилок / конфліктів, що стосується всієї форми */
+.form-alert {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border: 1px solid #fecaca;
+  border-left: 4px solid var(--danger-color);
+  border-radius: var(--border-radius);
+  background-color: #fef2f2;
+  color: #991b1b;
+  font-size: 14px;
+}
+
+.form-alert-title { font-weight: 600; margin-bottom: 6px; }
+
+.form-alert ul { padding-left: 18px; list-style: disc; }

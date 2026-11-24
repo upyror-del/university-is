@@ -1,0 +1,126 @@
+.schedule-wrapper {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.schedule-th {
+  padding: 12px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.schedule-th-time { width: 104px; }
+
+.schedule-time {
+  padding: 8px;
+  text-align: center;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  font-weight: normal;
+}
+
+.schedule-time-num {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.schedule-time-range {
+  display: block;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.schedule-cell {
+  height: 112px;
+  padding: 6px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.schedule-cell:last-child { border-right: none; }
+
+.cell-add {
+  width: 100%;
+  height: 100%;
+  min-height: 92px;
+  border: 1px dashed var(--border-color);
+  border-radius: 6px;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cell-add:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: #eff6ff;
+}
+
+.lesson-card {
+  position: relative;
+  height: 100%;
+  min-height: 92px;
+  padding: 8px 26px 8px 10px;
+  border-radius: 6px;
+  border-left: 4px solid var(--primary-color);
+  background-color: #eff6ff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.lesson-card-lecture  { border-left-color: #2563eb; background-color: #eff6ff; }
+.lesson-card-practice { border-left-color: #16a34a; background-color: #f0fdf4; }
+.lesson-card-lab      { border-left-color: #d97706; background-color: #fffbeb; }
+
+.lesson-subject {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.lesson-meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+.lesson-delete {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lesson-delete:hover {
+  background-color: #fee2e2;
+  color: var(--danger-color);
+}

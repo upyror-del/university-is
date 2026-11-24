@@ -1,0 +1,29 @@
+.student-search {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.student-search-input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.student-search-select {
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  color: var(--text-primary);
+  background-color: var(--surface-color);
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+  min-width: 150px;
+}
+
+.student-search-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}

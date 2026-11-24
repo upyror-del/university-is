@@ -1,78 +1,60 @@
-# University IS — Практична робота №5
+# Проєктування інформаційних систем у React.js — практичні №5, №6, №7
 
-Проєктування архітектури інформаційної системи в React.js: модульна компонентна архітектура
-(Dashboard + модуль управління студентами).
+Три практичні роботи — це **один наскрізний проєкт** у три етапи:
 
-## Запуск
+| № | Етап | Що здається | Де в репозиторії |
+|---|---|---|---|
+| 5 | Проєктування архітектури ІС університету | схема ієрархії компонентів, структура папок, опис props і state, відповіді на 6 контрольних запитань | [`docs/practical-5-architecture.md`](docs/practical-5-architecture.md) |
+| 6 | Реалізація цієї ІС (УнівІС) | працюючий код + скріншоти Dashboard, таблиці студентів, пошуку, форми додавання | [`university-is/`](university-is) · [`docs/practical-6-implementation.md`](docs/practical-6-implementation.md) |
+| 7 | Індивідуальний проєкт — варіант **«Розклад занять»** (групи, викладачі, аудиторії) | той самий шаблон, адаптований під свою предметну область | [`schedule-is/`](schedule-is) · [`docs/practical-7-schedule.md`](docs/practical-7-schedule.md) |
 
-Потрібен **Node.js 18+** (перевірити: `node -v`).
+```
+.
+├── docs/                    звіти (№5, №6, №7) і скріншоти
+├── university-is/           практична №6 — React + Vite
+├── schedule-is/             практична №7 — React + Vite
+├── site/index.html          сторінка-зміст для GitHub Pages
+└── .github/workflows/       автодеплой на GitHub Pages
+```
+
+## Запуск локально
+
+Потрібен **Node.js 18+**. Кожен застосунок самодостатній:
 
 ```bash
+cd university-is      # або: cd schedule-is
 npm install
 npm run dev
 ```
 
-Відкрийте адресу з терміналу (зазвичай http://localhost:5173).
-
-Інші команди:
-
-```bash
-npm run build     # production-збірка у папку dist/
-npm run preview   # локальний перегляд збірки
-```
+Відкрийте адресу з термінала (зазвичай http://localhost:5173).
 
 ## Публікація на GitHub Pages
 
-У проєкті вже налаштовано автоматичний деплой (`.github/workflows/deploy.yml`, `base: './'` у `vite.config.js`).
+Workflow `.github/workflows/deploy.yml` збирає обидва застосунки й публікує їх одним сайтом.
 
 1. Створіть репозиторій на GitHub і залийте проєкт у гілку `main`:
    ```bash
    git init
    git add .
-   git commit -m "University IS"
+   git commit -m "Практичні №5-7"
    git branch -M main
    git remote add origin https://github.com/ВАШ-ЛОГІН/НАЗВА-РЕПОЗИТОРІЮ.git
    git push -u origin main
    ```
 2. У репозиторії: **Settings → Pages → Source → GitHub Actions**.
-3. Після завершення workflow (вкладка **Actions**) сайт буде доступний за адресою
-   `https://ВАШ-ЛОГІН.github.io/НАЗВА-РЕПОЗИТОРІЮ/`.
+3. Після завершення workflow (вкладка **Actions**) сайт буде за адресою `https://ВАШ-ЛОГІН.github.io/НАЗВА-РЕПОЗИТОРІЮ/`:
+   - `…/university-is/` — практична №6;
+   - `…/schedule/` — практична №7.
 
-Запустити деплой вручну можна у вкладці **Actions → Deploy to GitHub Pages → Run workflow**.
+Запустити деплой вручну: **Actions → Deploy to GitHub Pages → Run workflow**.
 
-## Запуск у GitHub Codespaces
+## GitHub Codespaces
 
-**Code → Codespaces → Create codespace**, у терміналі: `npm install` та `npm run dev`,
-потім відкрийте порт 5173 у браузері.
+**Code → Codespaces → Create codespace**, у терміналі:
 
-## Структура
-
-```
-src/
-├── components/
-│   ├── UI/          Button, Input, Card, Badge        (stateless, без бізнес-логіки)
-│   ├── Layout/      Header, Footer                    (макет і навігація)
-│   ├── Dashboard/   StatCard, RecentActivity          (аналітика)
-│   └── Students/    StudentTable, StudentForm, StudentSearch
-├── pages/           DashboardPage, StudentsPage
-├── data/            mockData.js                       (тестові дані)
-├── App.jsx          кореневий компонент, глобальний стан
-└── main.jsx         точка входу
+```bash
+cd schedule-is && npm install && npm run dev
 ```
 
-Ієрархія: **App → Layout / Pages → Features → UI**.
-
-## Що показати у звіті (скріншоти)
-
-1. **Dashboard** — 4 картки StatCard + список останніх подій.
-2. **Студенти** — пошук за іменем/email і фільтр за групою (наприклад, КН-31).
-3. **Форма** — «+ Додати студента» → «Зберегти студента» з порожніми полями (помилки валідації),
-   потім додати студента — він з'явиться першим у таблиці зі згенерованим аватаром.
-
-## Стан і потік даних
-
-- `App`: `activePage`, `students` (найвищий спільний батько) + колбеки `handleAdd`, `handleDelete`.
-- `StudentsPage`: `searchQuery`, `filterGroup`, `showForm`.
-- `StudentForm`: `formData`, `errors`.
-
-Дані ідуть вниз через props, зміни — вгору через колбеки.
+Потім відкрийте порт 5173 у браузері.

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Проєктування інформаційних систем — практичні №5–7</title>
+    <style>
+      :root { --primary: #2563eb; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; --bg: #f1f5f9; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+      main { max-width: 860px; margin: 0 auto; padding: 48px 20px; }
+      h1 { font-size: 26px; margin-bottom: 8px; }
+      p.lead { color: var(--muted); margin-bottom: 28px; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+      a.card { display: block; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 22px; color: inherit; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+      a.card:hover { border-color: var(--primary); }
+      a.card:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+      .tag { font-size: 12px; font-weight: 600; color: var(--primary); margin-bottom: 6px; }
+      .card h2 { font-size: 18px; margin-bottom: 6px; }
+      .card p { font-size: 14px; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Проєктування інформаційних систем у React.js</h1>
+      <p class="lead">Практичні роботи №5–7: один наскрізний проєкт у три етапи.</p>
+      <div class="grid">
+        <a class="card" href="./university-is/">
+          <p class="tag">Практична №6</p>
+          <h2>УнівІС</h2>
+          <p>Інформаційна система університету: Dashboard і управління студентами.</p>
+        </a>
+        <a class="card" href="./schedule/">
+          <p class="tag">Практична №7</p>
+          <h2>РозкладІС</h2>
+          <p>Розклад занять: групи, викладачі, аудиторії, перевірка конфліктів.</p>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

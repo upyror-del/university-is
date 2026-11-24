@@ -1,0 +1,40 @@
+.week-load {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.week-load-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.week-load-day {
+  width: 28px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.week-load-track {
+  flex: 1;
+  height: 12px;
+  border-radius: 6px;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+.week-load-bar {
+  height: 100%;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.week-load-count {
+  width: 24px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 600;
+}
