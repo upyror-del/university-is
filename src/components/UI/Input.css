@@ -1,0 +1,34 @@
+.ui-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ui-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.ui-input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+.ui-input:focus {
+  border-color: #2563eb;
+}
+
+.ui-input-error {
+  border-color: #ef4444;
+}
+
+.ui-error-msg {
+  font-size: 12px;
+  color: #ef4444;
+}

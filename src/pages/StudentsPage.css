@@ -1,0 +1,12 @@
+.page-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.page-header-row .page-title {
+  margin-bottom: 0;
+}

@@ -1,0 +1,14 @@
+.search-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-controls .ui-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-controls .select-group {
+  flex: 0 0 180px;
+}
